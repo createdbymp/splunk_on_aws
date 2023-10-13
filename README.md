@@ -1,1 +1,1 @@
-## Setting Up Splunk on AWS
+# Setting Up Splunk on AWS
