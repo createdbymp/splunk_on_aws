@@ -28,4 +28,6 @@ Resources used to complete this project and additional documentation.
  6. Create a Splunk account
 
 #1 Login into your AWS account. If you need the login url check the **Resources** section.
-#2 
+#2 Once you are logged in search VPC and click on VPC in the middle of the console to create a new one.
+#3 Create your private and public subnets to configure with your VPC. 
+
