@@ -23,9 +23,10 @@ Resources used to complete this project and additional documentation.
  1. Login into your AWS account. If you need the login url check the **Resources** section.
  2.  Once you are logged in search VPC and click on VPC in the middle of the console to create a new one.
  3. Create your private and public subnets to configure with your VPC.
+
 ![vpc](https://github.com/createdbymp/splunk/assets/87043765/b6d62170-55dc-46d0-9fdf-62105f2ea3c8) 
  
- 4. Create your Security Group
- 5. Create your EC2 instance
- 6. Create a Splunk account
+ 5. Create your Security Group
+ 6. Create your EC2 instance
+ 7. Create a Splunk account
 
