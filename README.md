@@ -26,7 +26,10 @@ Resources used to complete this project and additional documentation.
 
 ![vpc](https://github.com/createdbymp/splunk/assets/87043765/b6d62170-55dc-46d0-9fdf-62105f2ea3c8) 
  
- 5. Create your Security Group
- 6. Create your EC2 instance
- 7. Create a Splunk account
+ 4. When you create your Security Group make sure your inbound rules are as the diagram so you can SSH into your EC2 instance. Also, you will need to have port 8000 because by default this is the web port for Splunk. Outbound is not needed.
+
+![image](https://github.com/createdbymp/splunk/assets/87043765/9b50e43f-7fff-417a-ab3b-c064b26aa9a0)
+ 
+ 5. Create your EC2 instance
+ 6. Create a Splunk accountt
 
