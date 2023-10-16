@@ -44,9 +44,16 @@ Depending on how much data you intend to ingest into your EC2 instance determine
 
 ## Installing Splunk on EC2 instance
 
-1. Create a Splunk account. In the **Resources** section, click on the 'Create Splunk account here' link. Once logged in go to Products and click on Splunk Enterprise. In this demonstration we selected a Linux EC2 instance so we will be downloading a Linux installation package, specifically the '**.tgz**' one. 
+ 1. Create a Splunk account. In the **Resources** section, click on the 'Create Splunk account here' link. Once logged in go to Products and click on Splunk Enterprise. In this demonstration we selected a Linux EC2 instance so we will be downloading a Linux installation package, specifically the '**.tgz**' one. Copy and paste the Command Line for later use. 
 
 ![splunk1](https://github.com/createdbymp/splunk/assets/87043765/9a6c86f6-bcac-4899-844b-ea1af132c2dc)
 
 ![splunk2](https://github.com/createdbymp/splunk/assets/87043765/4a2311e8-19ce-42f1-b94d-341d2d73546d)
 
+![wget](https://github.com/createdbymp/splunk_installation/assets/87043765/2edf4439-b6b4-486b-9a10-bc0a0eedbcf6)
+
+ 2. Now it is time to SSH into your EC2 instance. Go to your EC2 instance you previously created and click on the Instance ID. Click on 'Connect', open a terminal and please follow the instructions from the screenshot below. Make sure to use the change directory **(cd)** command to locate to your private key. Then use the SSH example to connect to your EC2 instance.
+
+![ec2connect](https://github.com/createdbymp/splunk_installation/assets/87043765/07979597-be09-402b-9297-a9e927d894cf)
+
+ 3. 
