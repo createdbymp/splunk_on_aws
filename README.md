@@ -18,7 +18,7 @@ Resources used to complete this project and additional documentation.
  - [Splunk Enterprise documentation](https://www.splunk.com/en_us/pdfs/tech-brief/deploying-splunk-enterprise-on-amazon-web-services.pdf)
  - Create Splunk account [here](https://www.splunk.com/en_us/download/splunk-enterprise.html) for installation package
 
-## Step by Step
+## Setting up AWS account
 
  1. Login into your AWS account. If you need the login url check the **Resources** section.
  2.  Once you are logged in search VPC and click on VPC in the middle of the console to create a new one.
@@ -38,8 +38,11 @@ Resources used to complete this project and additional documentation.
 
 ![ec2 2](https://github.com/createdbymp/splunk/assets/87043765/c7e19ae7-8272-43a0-b020-2fc105472240)
 
- 6. Create a Splunk account. In the **Resources** section, click on the 'Create Splunk account here' link. Once logged in go to Products and click on Splunk Enterprise. In this demonstration we selected a Linux EC2 instance so we will be downloading a Linux installation package, specifically the '**.tgz**' one. 
+## Installing Splunk on EC2 instance
+
+1. Create a Splunk account. In the **Resources** section, click on the 'Create Splunk account here' link. Once logged in go to Products and click on Splunk Enterprise. In this demonstration we selected a Linux EC2 instance so we will be downloading a Linux installation package, specifically the '**.tgz**' one. 
 
 ![splunk1](https://github.com/createdbymp/splunk/assets/87043765/9a6c86f6-bcac-4899-844b-ea1af132c2dc)
 
 ![splunk2](https://github.com/createdbymp/splunk/assets/87043765/4a2311e8-19ce-42f1-b94d-341d2d73546d)
+
