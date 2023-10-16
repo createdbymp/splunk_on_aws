@@ -30,13 +30,17 @@ Resources used to complete this project and additional documentation.
 
 ![sg](https://github.com/createdbymp/splunk/assets/87043765/079832ad-57e1-4c38-92b8-c3f772bdc91b)
 
- 5. In this demonstration we will be using the Amazon Linux AMI for our EC2 instance. For more information on EC2 AMis following this [link.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html). Depending on how much data you intend to ingest into your EC2 instance determines your Instance Type. For this demonstration we will be using the '**t2.xlarge**' Instance Type. Make sure to create a key pair. You will need this in order SSH into the server. It is highly recommended. For more information on EC2 key pairs follow this [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Edit 'Network Settings' to select the existing Security Group and VPC you previously created and select a public subnet for your EC2 instance. 
+ 5. In this demonstration we will be using the Amazon Linux AMI for our EC2 instance. For more information on EC2 AMis following this [link.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html). Depending on how much compute power (CPU, Memory, Bandwidth) you use as your Instance Type determines how efficient your Splunk server runs. For this demonstration we will be using the '**t2.xlarge**' Instance Type. Make sure to create a key pair. You will need this in order SSH into the server. It is highly recommended. For more information on EC2 key pairs follow this [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Edit 'Network Settings' to select the existing Security Group and VPC you previously created and select a public subnet for your EC2 instance. 
 
 **Beware! Running your EC2 instance does cost money**. Unless you use the free tier. 
 
 ![ec2](https://github.com/createdbymp/splunk/assets/87043765/d2c04039-2cc6-40fd-ba79-8e36248317fa)
 
 ![ec2 2](https://github.com/createdbymp/splunk/assets/87043765/c7e19ae7-8272-43a0-b020-2fc105472240)
+
+Depending on how much data you intend to ingest into your EC2 instance determines your storage size.
+
+![ec2storage](https://github.com/createdbymp/splunk_installation/assets/87043765/bc6c2fb4-786c-4b93-9f26-6ff15cd322c7)
 
 ## Installing Splunk on EC2 instance
 
