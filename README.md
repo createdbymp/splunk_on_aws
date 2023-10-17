@@ -54,7 +54,7 @@ Depending on how much data you intend to ingest into your EC2 instance determine
 
  2. Now it is time to SSH into your EC2 instance. Go to your EC2 instance you previously created and click on the Instance ID. Click on 'Connect', open a terminal and please follow the instructions from the screenshot below. Make sure to use the change directory **(cd)** command to locate to your private key. Then use the SSH example to connect to your EC2 instance.
 
-![ec2connect](https://github.com/createdbymp/splunk_installation/assets/87043765/07979597-be09-402b-9297-a9e927d894cf)
+![ec2connect](https://github.com/createdbymp/splunk_installation/assets/87043765/ff39679d-1f97-4440-9d46-7bb51f98f367)
 
  3. Once you execute the ssh command to remote into your EC2 server, you should have a welcome screen like below. Now it is time to make a folder for Splunk installation package to be extracted into. Use the command **`sudo mkdir /opt/splunk`** (Linux) for Windows you would be **`/Program Files/splunk`**. Then make your **ec2-user** the owner of that directory. To do use the command **`sudo chown ec2-user /opt/splunk`**.
 
