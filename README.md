@@ -56,4 +56,26 @@ Depending on how much data you intend to ingest into your EC2 instance determine
 
 ![ec2connect](https://github.com/createdbymp/splunk_installation/assets/87043765/07979597-be09-402b-9297-a9e927d894cf)
 
- 3. 
+ 3. Once you execute the ssh command to remote into your EC2 server, you should have a welcome screen like below. Now it is time to make a folder for Splunk installation package to be extracted into. Use the command **`sudo mkdir /opt/splunk`** (Linux) for Windows you would be **`/Program Files/splunk`**. Then make your **ec2-user** the owner of that directory. To do use the command **`sudo chown ec2-user /opt/splunk`**.
+
+![ec2login](https://github.com/createdbymp/splunk_installation/assets/87043765/8139d8f2-e3cb-4957-a17d-6f40b9aba9a5)
+
+ 4. It is finally time to use the wget command we saved earlier for the Splunk installation. Make sure you cd into /opt/splunk folder then paste the wget command and run it! 
+
+Here it is if you missed it - **`wget -O splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.1.1/linux/splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz"`**
+
+ 5. Once it is complete do the 'ls' command to see the .tgz file inside your `/opt/splunk` directory. Now you have to extract that file. Make sure you are in the /opt/splunk directory before doing so.
+
+Here is the command to extract the zip file - **`tar -xzvC /opt -f <paste .tgz file>`**. Make sure to paste the zip file name after -f.
+
+![tar](https://github.com/createdbymp/splunk_installation/assets/87043765/800cc682-6fe5-4f4d-a1dd-5f41f034ae3e)
+
+ 6. The zip file has been extracted. Now you should have folders inside the directory you created. Cd into bin. This is the folder you will execute your splunk commands. Once you are in the bin folder do the **`./splunk`** start command to start Splunk. 
+
+![splunk-bin](https://github.com/createdbymp/splunk_installation/assets/87043765/77541078-40a9-4f2f-a806-2ebc0f2b886b)
+
+ 7.  It should prompt you to create a username and password. Please take note of that username and password. You will need it to login. Once that is complete it will give you the URL needed to login into Splunk Enterprise. Copy and paste that URL into the web browser and you should see the login page. You remember the username and password you created earlier in the terminal? You will use that to login. Congrats! You have officially deployed Splunk Enterprise on AWS.
+
+![final 1](https://github.com/createdbymp/splunk_installation/assets/87043765/4e5f9154-a766-469a-9ae2-2581e2624f7d)
+
+![final 2](https://github.com/createdbymp/splunk_installation/assets/87043765/6c5de5ec-d3ef-43c2-895c-5a70a8fbb0f3)
