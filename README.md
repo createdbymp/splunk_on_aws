@@ -1,6 +1,6 @@
 # Setting up Splunk Enterprise on AWS
 
-![SplunkDiagram](https://github.com/createdbymp/splunk/assets/87043765/8863b30e-f185-4f22-8e51-281f69109f1e)
+![splunk_aws](https://github.com/createdbymp/splunk_on_aws/assets/87043765/4b25d364-d15c-4f34-ad4e-368cfebdb88e)
 
 ## Introduction
 
@@ -25,41 +25,41 @@ Resources used to complete this project and additional documentation.
  2.  Once you are logged in search VPC and click on VPC in the middle of the console to create a new one.
  3. Create your private and public subnets to configure with your VPC. [Hint] You can select 'VPC only' or 'VPC or more' to create VPC and subnets in multiple AZs together.    
  
-![vpc](https://github.com/createdbymp/splunk/assets/87043765/33e259ec-45a2-4c7f-9c7b-e59874c7704a)
+![vpc](https://github.com/createdbymp/splunk_on_aws/assets/87043765/f0beae17-a52d-4555-ae5d-3f6cc90c8e83)
 
  4. When you create your Security Group make sure your inbound rules are as the diagram so you can SSH into your EC2 instance. Also, you will need to have port 8000 because by default this is the web port for Splunk. Outbound is not needed.
 
-![sg](https://github.com/createdbymp/splunk/assets/87043765/079832ad-57e1-4c38-92b8-c3f772bdc91b)
+![sg](https://github.com/createdbymp/splunk_on_aws/assets/87043765/b3b91bce-fdcc-48f9-b56f-48db89e057b7)
 
  5. In this demonstration we will be using the Amazon Linux AMI for our EC2 instance. For more information on EC2 AMis following this [link.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html). Depending on how much compute power (CPU, Memory, Bandwidth) you use as your Instance Type determines how efficient your Splunk server runs. For this demonstration we will be using the '**t2.xlarge**' Instance Type. Make sure to create a key pair. You will need this in order SSH into the server. It is highly recommended. For more information on EC2 key pairs follow this [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Edit 'Network Settings' to select the existing Security Group and VPC you previously created and select a public subnet for your EC2 instance. 
 
 **Beware! Running your EC2 instance does cost money**. Unless you use the free tier. 
 
-![ec2](https://github.com/createdbymp/splunk/assets/87043765/d2c04039-2cc6-40fd-ba79-8e36248317fa)
+![ec2](https://github.com/createdbymp/splunk_on_aws/assets/87043765/af8d00ec-9b4d-46e2-b6b3-0d8574945dc5)
 
-![ec2 2](https://github.com/createdbymp/splunk/assets/87043765/c7e19ae7-8272-43a0-b020-2fc105472240)
+![ec2 2](https://github.com/createdbymp/splunk_on_aws/assets/87043765/7070b0f8-0f81-4b9c-8e92-7959bdcfb032)
 
 Depending on how much data you intend to ingest into your EC2 instance determines your storage size.
 
-![ec2storage](https://github.com/createdbymp/splunk_installation/assets/87043765/bc6c2fb4-786c-4b93-9f26-6ff15cd322c7)
+![ec2storage](https://github.com/createdbymp/splunk_on_aws/assets/87043765/c15088e4-6f66-4e9e-98a0-3464eed2ee81)
 
 ## Installing Splunk on EC2 instance
 
  1. Create a Splunk account. In the **Resources** section, click on the 'Create Splunk account here' link. Once logged in go to Products and click on Splunk Enterprise. In this demonstration we selected a Linux EC2 instance so we will be downloading a Linux installation package, specifically the '**.tgz**' one. Copy and paste the Command Line for later use. 
 
-![splunk1](https://github.com/createdbymp/splunk/assets/87043765/9a6c86f6-bcac-4899-844b-ea1af132c2dc)
+![splunk1](https://github.com/createdbymp/splunk_on_aws/assets/87043765/05eff846-a3e0-4b5c-bfab-4de1a52010ea)
 
-![splunk2](https://github.com/createdbymp/splunk/assets/87043765/4a2311e8-19ce-42f1-b94d-341d2d73546d)
+![splunk2](https://github.com/createdbymp/splunk_on_aws/assets/87043765/9f11ebb6-d14d-4f55-ae76-d6b91298c6b7)
 
-![wget](https://github.com/createdbymp/splunk_installation/assets/87043765/2edf4439-b6b4-486b-9a10-bc0a0eedbcf6)
+![wget](https://github.com/createdbymp/splunk_on_aws/assets/87043765/1f9f9a81-bbd9-434c-8422-e92660dc61e9)
 
  2. Now it is time to SSH into your EC2 instance. Go to your EC2 instance you previously created and click on the Instance ID. Click on 'Connect', open a terminal and please follow the instructions from the screenshot below. Make sure to use the change directory **(cd)** command to locate to your private key. Then use the SSH example to connect to your EC2 instance.
 
-![ec2connect](https://github.com/createdbymp/splunk_installation/assets/87043765/ff39679d-1f97-4440-9d46-7bb51f98f367)
+![ec2connect](https://github.com/createdbymp/splunk_on_aws/assets/87043765/2307df7b-835f-41c8-afdb-8f0b981eb88f)
 
  3. Once you execute the ssh command to remote into your EC2 server, you should have a welcome screen like below. Now it is time to make a folder for Splunk installation package to be extracted into. Use the command **`sudo mkdir /opt/splunk`** (Linux) for Windows you would be **`/Program Files/splunk`**. Then make your **ec2-user** the owner of that directory. To do use the command **`sudo chown ec2-user /opt/splunk`**.
 
-![ec2login](https://github.com/createdbymp/splunk_installation/assets/87043765/8139d8f2-e3cb-4957-a17d-6f40b9aba9a5)
+![ec2login](https://github.com/createdbymp/splunk_on_aws/assets/87043765/eaa71244-f256-4550-845e-be89afed0de6)
 
  4. It is finally time to use the wget command we saved earlier for the Splunk installation. Make sure you cd into /opt/splunk folder then paste the wget command and run it! 
 
@@ -69,14 +69,14 @@ Here it is if you missed it - **`wget -O splunk-9.1.1-64e843ea36b1-Linux-x86_64.
 
 Here is the command to extract the zip file - **`tar -xzvC /opt -f <paste .tgz file>`**. Make sure to paste the zip file name after -f.
 
-![tar](https://github.com/createdbymp/splunk_installation/assets/87043765/800cc682-6fe5-4f4d-a1dd-5f41f034ae3e)
+![tar](https://github.com/createdbymp/splunk_on_aws/assets/87043765/78c566af-7680-4e12-b26e-8d284441cc41)
 
  6. The zip file has been extracted. Now you should have folders inside the directory you created. Cd into bin. This is the folder you will execute your splunk commands. Once you are in the bin folder do the **`./splunk`** start command to start Splunk. 
 
-![splunk-bin](https://github.com/createdbymp/splunk_installation/assets/87043765/77541078-40a9-4f2f-a806-2ebc0f2b886b)
+![splunk-bin](https://github.com/createdbymp/splunk_on_aws/assets/87043765/881b9e56-7644-4abc-9a00-5e1f294cdde2)
 
  7.  It should prompt you to create a username and password. Please take note of that username and password. You will need it to login. Once that is complete it will give you the URL needed to login into Splunk Enterprise. Copy and paste that URL into the web browser and you should see the login page. You remember the username and password you created earlier in the terminal? You will use that to login. Congrats! You have officially deployed Splunk Enterprise on AWS.
 
-![final 1](https://github.com/createdbymp/splunk_installation/assets/87043765/4e5f9154-a766-469a-9ae2-2581e2624f7d)
+![final 1](https://github.com/createdbymp/splunk_on_aws/assets/87043765/a6472447-f26a-491d-9124-9242f9178978)
 
-![final 2](https://github.com/createdbymp/splunk_installation/assets/87043765/6c5de5ec-d3ef-43c2-895c-5a70a8fbb0f3)
+![final 2](https://github.com/createdbymp/splunk_on_aws/assets/87043765/11210c64-1270-464a-97a8-ee09057ebd05)
