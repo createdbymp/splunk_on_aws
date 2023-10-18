@@ -1,4 +1,5 @@
 # Setting up Splunk Enterprise on AWS
+
 ![SplunkDiagram](https://github.com/createdbymp/splunk/assets/87043765/8863b30e-f185-4f22-8e51-281f69109f1e)
 
 ## Introduction
