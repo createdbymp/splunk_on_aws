@@ -80,3 +80,7 @@ Here is the command to extract the zip file - **`tar -xzvC /opt -f <paste .tgz f
 ![final 1](https://github.com/createdbymp/splunk_on_aws/assets/87043765/a6472447-f26a-491d-9124-9242f9178978)
 
 ![final 2](https://github.com/createdbymp/splunk_on_aws/assets/87043765/11210c64-1270-464a-97a8-ee09057ebd05)
+
+## Conclusion
+
+Splunk is a robust platform for managing, analyzing, and deriving insights from machine-generated data. Its infrastructure includes forwarders, indexers, search heads, and specialized servers for centralized control. Splunk's capabilities encompass data ingestion, indexing, powerful search, visualization, correlation, alerting, and machine learning. It excels in security, compliance, scalability, and customization, making it invaluable for IT operations, security, business intelligence, and various other applications. Theres so much that can be done, however, this project was only to get Splunk installed. 
