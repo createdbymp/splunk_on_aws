@@ -33,7 +33,7 @@ Resources used to complete this project and additional documentation.
 
  5. In this demonstration we will be using the Amazon Linux AMI for our EC2 instance. For more information on EC2 AMis following this [link.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html). Depending on how much compute power (CPU, Memory, Bandwidth) you use as your Instance Type determines how efficient your Splunk server runs. For this demonstration we will be using the '**t2.xlarge**' Instance Type. Make sure to create a key pair. You will need this in order SSH into the server. It is highly recommended. For more information on EC2 key pairs follow this [link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Edit 'Network Settings' to select the existing Security Group and VPC you previously created and select a public subnet for your EC2 instance. 
 
-**Beware! Running your EC2 instance does cost money**. Unless you use the free tier. 
+**Beware! Running your EC2 instance does cost money. Please make sure to Hibernate your instance when not in use.** 
 
 ![ec2](https://github.com/createdbymp/splunk_on_aws/assets/87043765/af8d00ec-9b4d-46e2-b6b3-0d8574945dc5)
 
